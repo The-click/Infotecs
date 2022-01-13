@@ -1,0 +1,164 @@
+.table tbody td:nth-child(3) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.table {
+    width: 50%;
+    /* margin: 0 auto; */
+}
+
+.cover {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cover div {
+    opacity: 0;
+    transition: 1s all ease;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+}
+
+.cover div * {
+    border-radius: 6px;
+    border: none;
+    padding: 4px 5px;
+}
+
+.table tr {
+    position: relative;
+}
+
+.table td,
+th {
+    border: 1px solid black;
+    transition: 0.2s all ease;
+    padding: 3px 5px;
+    position: relative;
+}
+
+.table td {
+    cursor: pointer;
+}
+
+.table__sort {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50%;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.08;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.table__sort:hover {
+    opacity: 0.45;
+}
+
+.table__sort.up {
+    top: -2px;
+}
+
+.table__sort.down {
+    bottom: -2px;
+}
+
+.table__sort.up img {
+    transform: rotate(180deg);
+}
+
+.table__sort.selected {
+    opacity: 0.20;
+}
+
+.change__line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* display: flex; */
+}
+
+.change__line *:not(button) {
+    width: calc(50vw - 30px);
+    height: 40px;
+}
+
+.change__line button {
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.change__line button:hover {
+    background-color: black;
+    color: white;
+}
+
+tr.select td {
+    border: 2px solid green;
+}
+
+.pagination {
+    display: none;
+    gap: 5px 0;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.pagination.show {
+    display: flex;
+}
+
+.btn__pag {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.btn__pag.current {
+    background-color: rgba(200, 200, 200, 1);
+    /* color: white; */
+}
+
+.table__hidden {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 90%;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1.5px solid black;
+    background: white;
+    cursor: pointer;
+}
+
+.table__hidden.active {
+    border: 1px solid darkgrey;
+    background: darkgray;
+}
+
+td[data-type-cell].hidden {
+    opacity: 0;
+}

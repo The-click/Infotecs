@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Table</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th>First name
+                        <button class="table__sort up" id='sortNameUp' data-type-sort='firstName'> <img src="./img/sort-down.png" alt="sort arrow"></button>
+                        <button class="table__sort down" id='sortNameDown' data-type-sort='firstName'><img src="./img/sort-down.png" alt="sort arrow"></button> </th>
+                    <th>Last name
+                        <button class="table__sort up" id='sortLastUp' data-type-sort='lastName'> <img src="./img/sort-down.png" alt="sort arrow"></button>
+                        <button class="table__sort down" id='sortLastDown' data-type-sort='lastName'><img src="./img/sort-down.png" alt="sort arrow"></button>
+                    </th>
+                    <th>About
+                        <button class="table__sort up" id='sortAboutUp' data-type-sort='about'> <img src="./img/sort-down.png" alt="sort arrow"></button>
+                        <button class="table__sort down" id='sortAboutDown' data-type-sort='about'><img src="./img/sort-down.png" alt="sort arrow"></button>
+                    </th>
+                    <th>Eye color
+                        <button class="table__sort up" id='sortEyeUp' data-type-sort='eyeColor'> <img src="./img/sort-down.png" alt="sort arrow"></button>
+                        <button class="table__sort down" id='sortEyeDown' data-type-sort='eyeColor'><img src="./img/sort-down.png" alt="sort arrow"></button>
+                    </th>
+                </tr>
+                <tr>
+                    <td><button class="table__hidden" data-type-hidden="firstName">  <img src="./img/visibility.png" alt="hidden eye"></button></td>
+                    <td><button class="table__hidden" data-type-hidden="lastName">   <img src="./img/visibility.png" alt="hidden eye"></button></td>
+                    <td><button class="table__hidden" data-type-hidden="about">      <img src="./img/visibility.png" alt="hidden eye"></button></td>
+                    <td><button class="table__hidden" data-type-hidden="eyeColor">   <img src="./img/visibility.png" alt="hidden eye"></button></td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+
+
+        </table>
+        <div class="pagination">
+            <button class="btn__pag" id="pag_prev">
+                &lt;
+            </button>
+            <button class="btn__pag" id="pag_1">
+                1
+            </button>
+            <button class="btn__pag" id="pag_2">
+                2
+            </button>
+            <button class="btn__pag" id="pag_next">
+                &gt;
+            </button>
+        </div>
+
+    </div>
+    <script src="./script.js" type="module"></script>
+
+</body>
+
+</html>
